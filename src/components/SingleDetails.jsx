@@ -7,22 +7,22 @@ const SingleNews = () => {
     if(news === 'not found'){
         return
     }
-    const {author,total_view,title,thumbnail_url,details} = news;
-    const {name,published_date,img} = author;
-
+    const {author,total_view,title,thumbnailUrl,details} = news;
+    const {name,published_date} = author;
+    console.log(thumbnailUrl);
 
     return (
         <div>
             <div className="flex flex-col  p-6 space-y-6 overflow-hidden rounded-lg shadow-md bg-gray-900 text-gray-100 mb-2">
                 <div className="flex space-x-4">
-                    <img alt="" src={img} className="object-cover w-12 h-12 rounded-full shadow bg-gray-500" />
+                    <img alt="" src={thumbnailUrl} className="object-cover w-12 h-12 rounded-full shadow bg-gray-500" />
                     <div className="flex flex-col space-y-1">
                         <p rel="noopener noreferrer" href="#" className="text-sm font-semibold">{name ? name : "Name Not Found"}</p>
                         <span className="text-xs text-gray-400">{published_date}</span>
                     </div>
                 </div>
                 <div>
-                    <img src={thumbnail_url} alt="" className="object-cover w-full mb-4 h-60 sm:h-96 bg-gray-500 rounded-lg" />
+                    <img src={thumbnailUrl} alt="" className="object-cover w-full mb-4 h-60 sm:h-96 bg-gray-500 rounded-lg" />
                     <h2 className="mb-1 text-xl font-semibold">{title}</h2>
                     <p className="text-sm text-gray-400">{details}</p>
                 </div>

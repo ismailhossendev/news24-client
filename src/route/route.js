@@ -11,7 +11,7 @@ export  const route = createBrowserRouter([
         children:([
             {
                 path:'/',
-                loader:() => fetch('http://localhost:5000/news'),
+                loader:() => fetch('http://localhost:5000/new-news'),
                 element:<News/>
             },
             {
